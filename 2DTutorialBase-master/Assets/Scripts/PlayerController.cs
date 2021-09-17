@@ -120,6 +120,8 @@ public class PlayerController : MonoBehaviour
             if (hit.transform.CompareTag("Enemy")) {
                 Debug.Log("Tons of Damage");
                 hit.transform.GetComponent<Enemy>().TakeDamage(Damage);
+            } else if (hit.transform.CompareTag("Mimic")){
+                hit.transform.GetComponent<Mimic>().TakeDamage((float)(Damage*0.8));
             }
         }
         yield return new WaitForSeconds(hitboxtiming);
@@ -171,6 +173,10 @@ public class PlayerController : MonoBehaviour
         foreach (RaycastHit2D hit in hits) {
             if (hit.transform.CompareTag("Chest")) {
                 hit.transform.GetComponent<Chest>().interact();
+            }
+            else if (hit.transform.CompareTag("Mimic")) {
+                Debug.Log("Here");
+                hit.transform.GetComponent<Mimic>().interact();
             }
         }
     }

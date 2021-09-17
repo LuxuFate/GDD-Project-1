@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Chest
+  - Mimic
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Astral
+  - Physical
   - 
   - 
   - 
